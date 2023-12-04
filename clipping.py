@@ -17,7 +17,7 @@ with polygon:
 
     p = Polygon((X_min, Y_min), (X_max, Y_max))
     cols[0].subheader("Vertices", anchor=False)
-    vertices = st.text_input("Coordinates", placeholder="x1,y1,x2,y2,x3,y3,x4,y4.......")
+    vertices = cols[0].text_input("Coordinates", placeholder="x1,y1,x2,y2,x3,y3,x4,y4.......")
     if vertices!="":
         vertices = vertices.split(",")
         vertices = list(map(float, vertices))
@@ -63,7 +63,7 @@ with line:
 
     l = Line_clipping((X_min, Y_min), (X_max, Y_max))
     cols[0].subheader("Vertices", anchor=False)
-    vertices = st.text_input("Coordinates", placeholder="x1,y1,x2,y2")
+    vertices = cols[0].text_input("Coordinates", placeholder="x1,y1,x2,y2")
     if vertices!="":
         vertices = vertices.split(",")
         vertices = list(map(float, vertices))
